@@ -16,7 +16,9 @@
           exact
         >
           <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon color="yellow">
+              {{ item.icon }}
+            </v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
@@ -30,7 +32,9 @@
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-app-bar-title>13th Tipster</v-app-bar-title>
+      <div>
+        13TH TIPSTER
+      </div>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -50,19 +54,19 @@
 export default {
   data () {
     return {
-      clipped: false,
+      clipped: true,
       drawer: false,
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
+          icon: 'mdi-home',
+          title: 'Home',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-account',
+          title: 'Chi siamo',
+          to: '/about'
         }
       ],
       miniVariant: false,
@@ -73,3 +77,17 @@ export default {
   }
 }
 </script>
+<style>
+.border{
+  border-bottom: 1px solid yellow;
+}
+#app {
+
+font-family: acumin-pro, sans-serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+}
+</style>
