@@ -7,7 +7,6 @@
       <div class="body-1 text-left mt-5">
       Forniamo giornalmente pronostici, suggerimenti ed anteprime sulle principali competizioni sportive.
       Grazie ai nostri consigli ti aiutiamo a scegliere tra le offerte dei bookmaker in possesso di regolare concessione ad operare in Italia rilasciata dall’Agenzia delle Dogane e dei Monopoli.
-      Il canale verrà aggiornato ogni giorno.
       </div>
     </v-col>
     <v-col offset-md="3" md="1" xs="12">

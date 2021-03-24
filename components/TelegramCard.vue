@@ -1,24 +1,18 @@
 <template>
   <v-card class="my-6">
     <v-card-title class="yellow--text">
-      Nome casa scommesse
+      {{ title }}
     </v-card-title>
     <v-card-text>
       <div>
         <h1>
-          Bonus:
+          {{ description }}
         </h1>
-        <h2>
-          Ciao
-        </h2>
-        <h2>
-          Ciao
-        </h2>
       </div>
     </v-card-text>
     <v-card-actions>
       <v-spacer />
-      <a :href="link" e>
+      <a :href="link">
         <v-btn color="yellow" class="black--text">
           Entra
           <v-icon

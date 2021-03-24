@@ -3,11 +3,20 @@
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
-      :clipped="clipped"
       fixed
       app
     >
       <v-list>
+        <v-list-item @click="()=> miniVariant = !miniVariant">
+          <v-list-item-action>
+            <v-icon color="yellow">
+              mdi-menu
+            </v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Menu</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -26,18 +35,13 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <div>
-        13TH TIPSTER
-      </div>
-    </v-app-bar>
+
     <v-main>
       <v-container>
+        <div class="img mx-auto">
+          <v-img lazy-src="/logo.png" src="/logo.png" max-width="200" />
+        </div>
+
         <nuxt />
       </v-container>
     </v-main>
@@ -45,11 +49,10 @@
       :absolute="!fixed"
       app
     >
-    Il gioco è vietato ai minori e può causare dipendenza patologica - <a href="https://www.adm.gov.it/portale/monopoli/giochi/probabilita-vincita"> probabilità di vincita</a>
+      Il gioco è vietato ai minori e può causare dipendenza patologica - <a href="https://www.adm.gov.it/portale/monopoli/giochi/probabilita-vincita"> probabilità di vincita</a>
 
-      <v-spacer></v-spacer>
+      <v-spacer />
       <span>&copy; {{ new Date().getFullYear() }}</span>
-
     </v-footer>
   </v-app>
 </template>
@@ -59,7 +62,7 @@ export default {
   data () {
     return {
       clipped: true,
-      drawer: false,
+      drawer: true,
       fixed: false,
       items: [
         {
@@ -73,10 +76,7 @@ export default {
           to: '/about'
         }
       ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+      miniVariant: true
     }
   }
 }
