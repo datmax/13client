@@ -16,26 +16,13 @@
           Canali telegram:
         </h1>
 
-        <telegram-card title="ciao" link="https://www.google.com" description="ciao" total-bonus="500" />
+        <telegram-card title="ciao" link="https://www.casino-sicuro.it/advs/?ql=1546&fromdom=tipster-13th.tipsterspace" description="ciao" total-bonus="500" />
       </div>
     </v-col>
   </v-row>
 </template>
 
 <script>
-import BonusCard from '../components/BonusCard.vue'
-import TelegramCard from '../components/TelegramCard.vue'
-export default {
-  components: {
-    BonusCard,
-    TelegramCard
-  },
-  head () {
-    return {
-      title: '13Tipster'
-    }
-  }
-}
 </script>
 <style>
 h2, h1{

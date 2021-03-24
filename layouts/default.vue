@@ -45,7 +45,11 @@
       :absolute="!fixed"
       app
     >
+    Il gioco è vietato ai minori e può causare dipendenza patologica - <a href="https://www.adm.gov.it/portale/monopoli/giochi/probabilita-vincita"> probabilità di vincita</a>
+
+      <v-spacer></v-spacer>
       <span>&copy; {{ new Date().getFullYear() }}</span>
+
     </v-footer>
   </v-app>
 </template>
