@@ -1,21 +1,15 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
-      :mini-variant="miniVariant"
-      permanent
+      v-model="drawer"
+      temporary
       app
     >
       <v-list>
-        <v-list-item @click="()=> miniVariant = !miniVariant">
-          <v-list-item-action>
-            <v-icon color="yellow">
-              mdi-menu
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Menu</v-list-item-title>
-          </v-list-item-content>
+        <v-list-item>
+          <v-img lazy-src="/logo.png" src="/logo.png" max-width="200" class="mb-2" />
         </v-list-item>
+        <v-divider />
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -34,25 +28,24 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
+    <v-app-bar app dense>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+    </v-app-bar>
     <v-main>
-      <v-container>
-        <div class="img mx-auto">
-          <v-img lazy-src="/logo.png" src="/logo.png" max-width="500" />
-        </div>
+      <v-container fluid>
+        <v-img lazy-src="/logo.png" src="/logo.png" max-width="500" class="mb-2 mx-auto" />
 
         <nuxt />
       </v-container>
-      <v-footer
-        :absolute="!fixed"
-        app
-      >
-        Il gioco è vietato ai minori e può causare dipendenza patologica - <a href="https://www.adm.gov.it/portale/monopoli/giochi/probabilita-vincita"> probabilità di vincita</a>
-
-        <v-spacer />
-        <span>&copy; {{ new Date().getFullYear() }}</span>
-      </v-footer>
     </v-main>
+    <v-footer
+      app
+    >
+      Il gioco è vietato ai minori e può causare dipendenza patologica - <a href="https://www.adm.gov.it/portale/monopoli/giochi/probabilita-vincita"> probabilità di vincita</a>
+
+      <v-spacer />
+      <span>&copy; {{ new Date().getFullYear() }}</span>
+    </v-footer>
   </v-app>
 </template>
 
@@ -61,7 +54,7 @@ export default {
   data () {
     return {
       clipped: true,
-      drawer: true,
+      drawer: false,
       fixed: false,
       items: [
         {
@@ -73,6 +66,11 @@ export default {
           icon: 'mdi-account',
           title: 'Chi siamo',
           to: '/about'
+        },
+        {
+          icon: 'mdi-home',
+          title: 'Home',
+          to: '/home'
         }
       ],
       miniVariant: true
