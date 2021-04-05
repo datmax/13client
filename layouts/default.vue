@@ -1,9 +1,8 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
-      v-model="drawer"
       :mini-variant="miniVariant"
-      fixed
+      permanent
       app
     >
       <v-list>
@@ -39,21 +38,21 @@
     <v-main>
       <v-container>
         <div class="img mx-auto">
-          <v-img lazy-src="/logo.png" src="/logo.png" max-width="200" />
+          <v-img lazy-src="/logo.png" src="/logo.png" max-width="500" />
         </div>
 
         <nuxt />
       </v-container>
-    </v-main>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      Il gioco è vietato ai minori e può causare dipendenza patologica - <a href="https://www.adm.gov.it/portale/monopoli/giochi/probabilita-vincita"> probabilità di vincita</a>
+      <v-footer
+        :absolute="!fixed"
+        app
+      >
+        Il gioco è vietato ai minori e può causare dipendenza patologica - <a href="https://www.adm.gov.it/portale/monopoli/giochi/probabilita-vincita"> probabilità di vincita</a>
 
-      <v-spacer />
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+        <v-spacer />
+        <span>&copy; {{ new Date().getFullYear() }}</span>
+      </v-footer>
+    </v-main>
   </v-app>
 </template>
 

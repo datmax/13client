@@ -9,7 +9,7 @@
       Grazie ai nostri consigli ti aiutiamo a scegliere tra le offerte dei bookmaker in possesso di regolare concessione ad operare in Italia rilasciata dall’Agenzia delle Dogane e dei Monopoli.
       </div>
     </v-col>
-    <v-col offset-md="3" md="1" xs="12">
+    <v-col offset-md="2" md="1" xs="12">
       <img
 
         class="imgg mx-auto"
