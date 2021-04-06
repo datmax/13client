@@ -7,7 +7,7 @@
     >
       <v-list>
         <v-list-item>
-          <v-img lazy-src="/logo.png" src="/logo.png" max-width="200" class="mb-2" />
+          <img lazy-src="~/assets/logo.webp" src="~/assets/logo.webp" class="w200 mb-2" >
         </v-list-item>
         <v-divider />
         <v-list-item
@@ -33,13 +33,14 @@
     </v-app-bar>
     <v-main>
       <v-container fluid>
-        <v-img lazy-src="/logo.png" src="/logo.png" max-width="500" class="mb-2 mx-auto" />
+        <v-img lazy-src="/logo.webp" src="/logo.webp" max-width="500" class="mb-2 mx-auto" />
 
         <nuxt />
       </v-container>
     </v-main>
     <v-footer
       app
+      absolute
     >
       Il gioco è vietato ai minori e può causare dipendenza patologica - <a href="https://www.adm.gov.it/portale/monopoli/giochi/probabilita-vincita"> probabilità di vincita</a>
 
@@ -68,9 +69,9 @@ export default {
           to: '/about'
         },
         {
-          icon: 'mdi-home',
-          title: 'Home',
-          to: '/home'
+          icon: 'mdi-check-decagram',
+          title: 'Affiliazioni',
+          to: '/affiliazioni'
         }
       ],
       miniVariant: true
@@ -90,5 +91,9 @@ font-weight: 700;
 
 font-style: italic;
 
+}
+
+.w200{
+  max-width: 200px;
 }
 </style>

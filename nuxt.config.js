@@ -20,7 +20,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: '"https://use.typekit.net/iim4nmb.css"'
+        href: 'https://use.typekit.net/iim4nmb.css'
       }
     ]
   },

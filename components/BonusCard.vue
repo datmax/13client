@@ -1,5 +1,5 @@
 <template>
-  <v-card class="my-6">
+  <v-card outlined elevation="4" color="blue-grey darken-4" class="my-6">
     <v-card-title class="yellow--text name">
       <h1>
         {{ name }}
@@ -20,7 +20,7 @@
           </div>
         </v-col>
         <v-col md="6" lg="6" xs="6" class="pl-16">
-          <v-img max-height="300" :lazy-src="'/' + image" :src="'/' + image" justify="center" />
+          <v-img max-height="300" :lazy-src="'/low' + image" :src="'/' + image" justify="center" />
         </v-col>
       </v-row>
     </v-card-text>
